@@ -30,17 +30,29 @@
 
     const CustomForm = () => {
 
+      const[nome, setNome] = React.useState('')
+      const[sobreNome, setSobreNome] = React.useState('')
+      const[nomeCompleto, setNomeCompleto] = React.useState('')
+
+      const handleInputChange = event => {
+        if(event.target.id === 'nome') {
+          setNome(event.target.value.toUpperCase())
+        } else {
+          setSobrenome(event.target.value.toUpperCase())
+        }
+      }
+
       return (
         <form>
           <div>
             <label htmlFor="nome">Nome</label>
-            <input id="nome" />
+            <input id="nome" type="string" value={nome} onChange={handleInputChange}/>
           </div>
           <div>
             <label htmlFor="sobrenome">Sobrenome</label>
-            <input id="sobrenome" />
+            <input id="sobrenome" type="string" value={sobreNome} onChange={handleInputChange}/>
           </div>
-          <div id="nomeCompleto"></div>
+          <div id="nomeCompleto" type="string" value={String(nome) + ' ' + String(sobreNome)} readOnly /><br />
         </form>
       )
     
