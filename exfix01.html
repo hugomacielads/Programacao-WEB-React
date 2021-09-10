@@ -38,7 +38,7 @@
         if(event.target.id === 'nome') {
           setNome(event.target.value.toUpperCase())
         } else {
-          setSobrenome(event.target.value.toUpperCase())
+          setSobreNome(event.target.value.toUpperCase())
         }
       }
 
@@ -52,10 +52,11 @@
             <label htmlFor="sobrenome">Sobrenome</label>
             <input id="sobrenome" type="string" value={sobreNome} onChange={handleInputChange}/>
           </div>
-          <div id="nomeCompleto" type="string" value={String(nome) + ' ' + String(sobreNome)} readOnly /><br />
+          <div>
+          {String(nome) + ' ' + String(sobreNome)}
+          </div>
         </form>
       )
-    
     }
 
     ReactDOM.render(<CustomForm />, document.getElementById('root'))
