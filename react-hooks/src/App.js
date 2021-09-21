@@ -24,6 +24,9 @@ function App() {
             <Link to="teste2">Teste 2</Link>
           </li>
           <li>
+            <Link to='teste3'>Teste 3</Link>
+          </li>
+          <li>
             <Link to='ex01'>Exercício 01</Link>
           </li>
           <li>
@@ -38,6 +41,9 @@ function App() {
             </Route>
             <Route path="/teste2">
               <Teste2 />
+            </Route>
+            <Route path="/teste3">
+              <Teste3 />
             </Route>
             <Route path="/ex01">
               <Exercicio01 />
