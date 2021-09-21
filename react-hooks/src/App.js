@@ -1,8 +1,11 @@
 import { BrowserRouter, Route, Switch, Link } from 'react-router-dom'
 import Teste1 from './exercicios/Teste1'
 import Teste2 from './exercicios/Teste2'
+import Teste3 from './exercicios/Teste3'
 import Exercicio01 from './exercicios/01'
 import Exercicio02 from './exercicios/02'
+import Exercicio03 from './exercicios/03'
+import Exercicio04 from './exercicios/04'
 
 import './App.css';
 
@@ -32,6 +35,12 @@ function App() {
           <li>
             <Link to='ex02'>Exercício 02</Link>
           </li>
+          <li>
+            <Link to='ex03'>Exercício 03</Link>
+          </li>
+          <li>
+            <Link to='ex04'>Exercício 04</Link>
+          </li>
         </ul>
 
         <div style={{ border: '1px solid blue'}}>
@@ -50,6 +59,12 @@ function App() {
             </Route>
             <Route path="/ex02">
               <Exercicio02 />
+            </Route>
+            <Route path="/ex03">
+              <Exercicio03 />
+            </Route>
+            <Route path="/ex04">
+              <Exercicio04 />
             </Route>
           </Switch>
         </div>
